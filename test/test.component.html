@@ -18,3 +18,19 @@
  <button type="submit" (click)="changename()">toggle</button>
 
  <input type="text"  class="form-control"  [(ngModel)] = "userName">
+
+
+ <div *ngFor = "let user of users">
+  <div [ngSwitch] = "user.status">
+      <li *ngSwitchCase="'active'" [ngStyle]="{'color':'blue'}">
+          {{user.name}} is active
+      </li>
+      <li *ngSwitchCase="'Inactive'" [ngStyle]="{'color':'red'}">
+          {{user.name}} is InActive
+      </li>
+      
+      <li *ngSwitchDefault [ngStyle]="{'color':'Brown'}">
+         no result found 
+      </li>
+  </div>
+</div>

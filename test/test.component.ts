@@ -8,7 +8,31 @@ import { Component, OnInit } from '@angular/core';
 export class TestComponent implements OnInit {
 
   userName : String = ""
-
+  users=[{
+    name:'jagan',
+    status:'active',
+    place:'IND'
+  },{
+    name:'Rajesh',
+    status:'active',
+    place:'USA'
+  },
+  {
+    name:'Vijay',
+    status:'Inactive',
+    place:'AUS'
+  },
+  {
+    name:'mani',
+    status:'',
+    place:'UAE'
+  },
+  {
+    name:'saran',
+    status:'Inactive',
+    place:'ENG'
+  }
+  ]
   
 
   constructor() { }
@@ -18,7 +42,7 @@ export class TestComponent implements OnInit {
   
   }
   changename(){
-    this.userName = "pavi" 
+    this.userName = "Rajesh" 
    }
 
 }
